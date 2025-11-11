@@ -1,0 +1,10 @@
+{
+  "name": "backend-js-parser",
+  "version": "1.0.0",
+  "description": "Node.js script for parsing JS/TS with Babel",
+  "private": true,
+  "dependencies": {
+    "@babel/parser": "^7.24.7",
+    "typescript": "^5.4.5"
+  }
+}

@@ -17,32 +17,30 @@ DEFAULT_IGNORE_DIRS = {
     "build",
 }
 
-# For Phase 1, we only care about Python
+# --- MODIFIED: Added JS/TS extensions ---
 SUPPORTED_EXTENSIONS = {
-    ".py"
+    ".py",
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx",
 }
 
 
-# In Phase 2, this will be expanded:
-# SUPPORTED_EXTENSIONS = {
-#     ".py",
-#     ".js",
-#     ".jsx",
-#     ".ts",
-#     ".tsx",
-# }
+# --- END MODIFICATION ---
 
 def get_language_from_extension(ext: str) -> str:
     """
     Maps a file extension to its programming language.
     """
+    # --- MODIFIED: Added JS/TS languages ---
     if ext == ".py":
         return "python"
-    # Phase 2 additions:
-    # if ext in {".js", ".jsx"}:
-    #     return "javascript"
-    # if ext in {".ts", ".tsx"}:
-    #     return "typescript"
+    if ext in {".js", ".jsx"}:
+        return "javascript"
+    if ext in {".ts", ".tsx"}:
+        return "typescript"
+    # --- END MODIFICATION ---
     return "unknown"
 
 

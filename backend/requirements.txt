@@ -2,6 +2,8 @@ fastapi
 uvicorn[standard]
 pydantic-settings
 gitpython
-pytest-mock
 pytest
 httpx
+dagre-py
+pytest-mock
+pytest-asyncio

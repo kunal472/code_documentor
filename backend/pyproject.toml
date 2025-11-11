@@ -4,11 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.12"
 dependencies = [
+    "dagre-py>=0.1.7",
     "fastapi>=0.121.0",
     "gitpython>=3.1.45",
     "httpx>=0.28.1",
     "pydantic-settings>=2.11.0",
     "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
     "pytest-mock>=3.15.1",
     "uvicorn[standard]>=0.38.0",
 ]
