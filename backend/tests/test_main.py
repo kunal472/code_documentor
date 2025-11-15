@@ -24,7 +24,8 @@ def test_get_stats():
     assert response.json() == {"cloned_repos_count": 0}
 
 
-def test_post_analyze_invalid_url(mocker):
+@pytest.mark.asyncio
+async def test_post_analyze_invalid_url(mocker):
     """
     Tests the /analyze endpoint with a URL that will fail to clone.
     We mock the cloner to raise an exception.

@@ -29,7 +29,7 @@ def sample_python_file(tmp_path: Path) -> Path:
 def test_parse_python_file_structure(sample_python_file: Path):
     elements, imports = parse_python_file(sample_python_file)
 
-    assert len(elements) == 3  # MyClass, my_method, top_level_function
+    assert len(elements) == 3
     element_map = {el.name: el for el in elements}
     assert "MyClass" in element_map
     assert "my_method" in element_map
@@ -39,10 +39,7 @@ def test_parse_python_file_structure(sample_python_file: Path):
 def test_parse_python_file_imports(sample_python_file: Path):
     elements, imports = parse_python_file(sample_python_file)
 
-    # --- MODIFIED: This assertion is now correct ---
     assert len(imports) == 6
-    # --- END MODIFICATION ---
-
     assert "os" in imports
     assert "sys" in imports
     assert "json" in imports
